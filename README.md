@@ -47,5 +47,5 @@ _**Note**: Uploaded a swf file with working video. Please refer._
 ```sh
     cd /path/appointment-scheduler ;
     npm i;
-    node app.js
+    nodemon start
 ```
