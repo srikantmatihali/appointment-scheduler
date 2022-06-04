@@ -1,4 +1,4 @@
-# Programming Problems and its Solutions
+# Appointment Scheduler Basic App Version
 
 License: MIT
 
