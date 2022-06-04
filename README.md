@@ -1,4 +1,4 @@
-# Appointment Scheduler Basic App Version
+# Appointment Scheduler
 
 License: MIT
 
