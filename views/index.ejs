@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title><%= title %></title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="public/javascripts/app.js" ></script>  
+  <link rel="stylesheet" href="public/stylesheets/angularjs-datetime-picker.css" />
+  <script src="public/javascripts/angularjs-datetime-picker.js" ></script>
+</head>
+<body ng-app="taskApp" ng-controller="myCtrl" >
+	
+ <div >
+
+ 	<section id="formDiv" ng-show="showLogin" > 
+		<h1>Login Form</h1>
+		<form id="formCtrl" name="formCtrl" ng-submit="saveUserForm()" novalidate  >
+			<label>Name</label><br/>
+				<input type="text" id="name" name="name" ng-model="formData.name" />				
+				<br/>
+			<label>Password</label><br/>
+				<input type="password" id="password" name="password" ng-model="formData.password" />
+				<br/><br/>
+			<input type="submit" value="Submit"  />
+		</form>
+	</section>
+
+	<section id="displayDiv" ng-show="!showLogin"  >
+	<!--<section id="displayDiv" ng-show="!showLogin"  >-->
+		<div>
+			 			
+			<form id="AddForm" name="AddForm" ng-show="showUser" ng-submit="addAppointment()" novalidate >
+				<label>Date</label>
+				<input type="text" id="date" name="date" ng-model="dateData.date"
+  placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+  				<input type="hidden" id="uid" name="uid" ng-model="dateData.uid" />
+				<input type="submit" value="Add Appointment" />
+				<hr/>
+			</form>			
+		</div>
+
+		<div id="dataDisplay"   >
+				<h1>Display Appointments</h1>
+				<p ng-bind-html="myText" >Appointments</>
+				<ul ng-repeat="x in appointments"  >
+					<li><span>{{ x.book_time | date: "MMM d, y h:mm:ss a" }}</span></li>
+				</ul>
+		</div>
+
+		<ul>
+
+		</ul>
+
+	<section>
+
+ </div>		
+</body>
+</html>

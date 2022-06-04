@@ -1,0 +1,5 @@
+{
+	"mongoUri": "mongodb://@localhost:27277/task",
+	"baseUrlPort": "http://localhost:3000",
+	"baseUrl":""
+}
